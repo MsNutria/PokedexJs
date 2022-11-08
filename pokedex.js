@@ -15,17 +15,39 @@ const fetchPokemon = async () => {
 
     if (data) {
         console.log(data);
+
+        //Nombre pokemón
+        let pokeNombre = data.name;
+        nombrePokemon(pokeNombre);
+
+        //Imagen pokemón
         let pokeImg = data.sprites.front_default;
+
+        //Habilidades pokemón
         let pokeInfo = data.abilities;
         pokeImage(pokeImg);
         pokeData(pokeInfo);
         console.log(pokeImg);
+
+        //id Pokemón
+        let pokeNumero = data.id;
+        idPokemon(pokeNumero);
     }
 }
 
 const pokeImage = (url) => {
     const pokePhoto = document.getElementById("pokeImg");
     pokePhoto.src = url;
+}
+
+const nombrePokemon = (url) => {
+    const pokeNombre = document.getElementById("pokeNombre");
+    pokeNombre.innerHTML = url;
+}
+
+const idPokemon = (url) => {
+    const pokeNum = document.getElementById('pokeId');
+    pokeNum.innerHTML = "#"+ url;
 }
 
 const pokeData = (abilities) => {

@@ -8,17 +8,26 @@
     <link rel="stylesheet" href="./css/pokedex.css">
     
 </head>
+
+<header class="header">
+    <img src="./img/logo-pokemon.png" alt="pokemon logo-pokemon">
+</header>
+
 <body>
     <h1>Pokedex LaunchX</h1>
     <div class="pokedex">
+        <div class="nombre">
+             <p id="pokeNombre">Pokemon name ...</p>
+             <p id="pokeId">#00</p>
+         </div>
+
         <div class="pokePhoto">
             <img src="./img/pokebola.png" alt="Pokemon" id="pokeImg" class="image">
         </div>
         <div class="pokeData">
             <input type="text" placeholder="Pikachu" id="pokeName" name="pokeName">
             <button onclick="fetchPokemon()">Buscar Pokemón</button>
-            <div class="pokeScreen" id="abilities">
-            </div>
+            <div class="pokeScreen" id="abilities"></div>
         </div>
     </div>
 </body>
